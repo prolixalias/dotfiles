@@ -1,0 +1,30 @@
+[github]
+	user = prolixalias
+[core]
+	editor = vim
+	autocrlf = false
+	safecrlf = true
+	filemode = false
+	excludesfile = /Users/zee/.gitignore_global
+[user]
+	name = Paul Talbot
+	email = prolixalias@gmail.com
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+  lc =  log --pretty=format:'%h %ad| %s%d [%an]' --graph --date=short --max-count=1
+[push]
+	default = simple
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[merge]
+	ff = only

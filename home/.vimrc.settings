@@ -1,0 +1,60 @@
+noremap  <Up> ""
+noremap! <Up> <Esc>
+noremap  <Down> ""
+noremap! <Down> <Esc>
+noremap  <Left> ""
+noremap! <Left> <Esc>
+noremap  <Right> ""
+noremap! <Right> <Esc>
+set guifont=Inconsolata-dz\ for\ Powerline:h12
+set tw=0
+set relativenumber
+set number
+:colors zenburn
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set t_Co=256
+"set fdm=syntax
+
+
+try
+  set cc=80
+catch
+endtry
+
+:syntax on
+
+au BufNewFile,BufRead *.md set filetype=markdown
+
+let g:neocomplete#enable_at_startup = 1
+map <S-Tab> V`]=
+map j gj
+map k gk
+set rtp+=/home/zee/.local/lib/python2.7/site-packages/powerline/bindings/vim
+set rtp+=/Users/zeea/Library/Python/3.7/lib/python/site-packages/powerline/bindings/vim
+set laststatus=2
+set noshowmode
+let g:ctrlp_show_hidden = 1
+map <Leader>[ :bp<CR>
+map <Leader>] :bn<CR>
+map <Leader>b :CtrlPBuffer<CR>
+map <C-n> :NERDTreeToggle<CR>
+if $VIM_CRONTAB == "true"
+    set nobackup
+    set nowritebackup
+endif
+au BufNewFile,BufRead wilhelm  setf ruby
+"autocmd Syntax go,ruby,gitcommit %foldopen!
+:function! SomeCheck()
+:   if filereadable("~/.vimrc_temp")
+      :so ~/.vimrc_temp
+:   endif
+:endfunction
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_ruby_checkers=['mri', 'rubocop']
+let g:syntastic_puppet_puppet_exec = '/opt/puppetlabs/puppet/bin/puppet'
+let g:syntastic_puppet_puppetlint_exec = '/opt/puppetlabs/puppet/bin/puppet-lint'
