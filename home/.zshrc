@@ -38,14 +38,10 @@ plugins=(git ruby github git-remote-branch vagrant zsh-syntax-highlighting golan
 # Set general path
 export PATH=~/.local/bin:~/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
 
-# Append stuff to path if it exists
+# append stuff to path if it exists
 if [ -d /usr/local/lib/python3.7/bin ]; then
   export PATH=/usr/local/lib/python3.7/bin:$PATH
 fi
-
-#if [ -d ~/.rbenv ]; then
-#	export PATH=$HOME/.rbenv/bin:$PATH
-#fi
 
 if [ -d /usr/local/opt/go/libexec/bin ]; then
   export PATH=/usr/local/opt/go/libexec/bin:$PATH
@@ -53,14 +49,13 @@ fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-#options
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+# shell options
 set -o vi
 set editing-mode vi
 bindkey -v
 set blink-matching-paren on
 
-#aliases
+# aliases
 alias tmux="tmux -2"
 alias tns="tmux new -s"
 alias ta="tmux attach"
