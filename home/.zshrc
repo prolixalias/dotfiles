@@ -38,7 +38,7 @@ plugins=(git ruby github git-remote-branch vagrant zsh-syntax-highlighting golan
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Set general path
-export PATH=~/.local/bin:~/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/lib/python3.7/bin:$PATH
+export PATH=~/.local/bin:~/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
 
 # Append stuff to path if it exists
 if [ -d /usr/local/lib/python3.7/bin ]; then
@@ -52,6 +52,8 @@ fi
 if [ -d /usr/local/opt/go/libexec/bin ]; then
   export PATH=/usr/local/opt/go/libexec/bin:$PATH
 fi
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 #options
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
