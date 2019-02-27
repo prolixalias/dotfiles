@@ -31,7 +31,7 @@ ZSH_THEME="flazz"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # shellcheck disable=SC2034
-plugins=(git ruby github git-remote-branch vagrant zsh-syntax-highlighting vagrant golang docker aws terraform)
+plugins=(git ruby github git-remote-branch vagrant zsh-syntax-highlighting golang docker aws terraform)
 
 source "$ZSH/oh-my-zsh.sh"
 
@@ -80,7 +80,6 @@ alias grph='git rev-parse HEAD'
 alias de='dotenv'
 alias gs='git status'
 alias cleanprod='git fetch origin production && git checkout production && git reset --hard origin/production'
-
 alias oa='open -a'
 alias tr='gtr'
 alias cut='gcut'
