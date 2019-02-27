@@ -33,12 +33,18 @@ ZSH_THEME="agnoster"
 # shellcheck disable=SC2034
 plugins=(git ruby github git-remote-branch vagrant zsh-syntax-highlighting golang docker aws terraform)
 
-source "$ZSH/oh-my-zsh.sh"
+[[ -s "$ZSH/oh-my-zsh.sh" ]] && source "$ZSH/oh-my-zsh.sh"  
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Set general path
 export PATH=~/.local/bin:~/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/lib/python3.7/bin:$PATH
 
-# Append rbenv stuff to path if it exists
+# Append stuff to path if it exists
+if [ -d /usr/local/lib/python3.7/bin ]; then
+  export PATH=/usr/local/lib/python3.7/bin:$PATH
+fi
+
 if [ -d ~/.rbenv ]; then
 	export PATH=$HOME/.rbenv/bin:$PATH
 fi
