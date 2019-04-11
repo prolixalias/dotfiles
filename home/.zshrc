@@ -43,6 +43,10 @@ if [ -d /usr/local/lib/python3.7/bin ]; then
   export PATH=/usr/local/lib/python3.7/bin:$PATH
 fi
 
+if [ -d ~/Library/Python/3.7/bin ]; then                                    
+  export PATH=~/Library/Python/3.7/bin:$PATH                                
+fi 
+
 if [ -d /usr/local/opt/go/libexec/bin ]; then
   export PATH=/usr/local/opt/go/libexec/bin:$PATH
 fi
