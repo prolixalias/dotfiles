@@ -31,7 +31,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # shellcheck disable=SC2034
-plugins=(git ruby github git-remote-branch vagrant zsh-syntax-highlighting golang docker aws terraform)
+plugins=(git ruby github git-remote-branch vagrant golang docker aws terraform)
 
 [[ -s "$ZSH/oh-my-zsh.sh" ]] && source "$ZSH/oh-my-zsh.sh"  
 
@@ -175,3 +175,5 @@ if [ -e ~/.zshrc_womply ]; then
 fi
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
