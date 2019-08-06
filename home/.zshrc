@@ -89,9 +89,7 @@ alias oa='open -a'
 alias tr='gtr'
 alias cut='gcut'
 alias prune_puppet_branches="git branch | grep -v 'production' |grep -v -F '*' | xargs git branch -D"
-alias vmdhcp='sudo /Applications/VMware\ Fusion.app/Contents/Library/vmnet-cli --stop
-sudo /Applications/VMware\ Fusion.app/Contents/Library/vmnet-cli --configure
-sudo /Applications/VMware\ Fusion.app/Contents/Library/vmnet-cli --start'
+alias vmdhcp='sudo /Applications/VMware\ Fusion.app/Contents/Library/vmnet-cli --stop; sudo /Applications/VMware\ Fusion.app/Contents/Library/vmnet-cli --configure; sudo /Applications/VMware\ Fusion.app/Contents/Library/vmnet-cli --start'
 #alias pbcopy='xsel --clipboard --input'
 #alias pbpaste='xsel --clipboard --output'
 
