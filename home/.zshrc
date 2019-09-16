@@ -51,7 +51,7 @@ if [ -d /usr/local/opt/go/libexec/bin ]; then
   export PATH=/usr/local/opt/go/libexec/bin:$PATH
 fi
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+[[ -s "/usr/share/rvm/scripts/rvm" ]] && source "/usr/share/rvm/scripts/rvm"
 
 # shell options
 set -o vi
