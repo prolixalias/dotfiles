@@ -97,6 +97,10 @@ alias vmdhcp='sudo /Applications/VMware\ Fusion.app/Contents/Library/vmnet-cli -
 export EDITOR='vim'
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
 
+if [ -f ~/.aws/credentials ]; then
+  export AWS_PROFILE=cynerge
+fi
+
 if [ -f /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt ]; then
   export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 fi
