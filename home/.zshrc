@@ -1,3 +1,19 @@
+
+# Install oh-my-zsh if not present
+case "$OSTYPE" in
+  darwin*)
+    echo "MacOS"
+  ;;
+  linux*)
+    if [[ ! -d ~/.oh-my-zsh ]]; then
+      REPO=prolixalias/oh-my-zsh BRANCH=master /usr/bin/sh -c "$(/usr/bin/curl -fsSL https://raw.githubusercontent.com/prolixalias/oh-my-zsh/master/tools/install.sh)" --unattended
+    fi
+  ;;
+  dragonfly*|freebsd*|netbsd*|openbsd*)
+    echo "BSD"
+  ;;
+esac
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
