@@ -3,18 +3,22 @@
 case "$OSTYPE" in
   darwin*)
     echo "MacOS"
+    echo `ps`
   ;;
   linux*)
     echo "Linux"
+    echo `ps`
     if [[ -d ~/.vim/bundle/Vundle.vim && ! -d ~/.vim/bundle/Zenburn ]]; then
       /usr/bin/vim +PluginInstall +qall  
     fi
   ;;
   dragonfly*|freebsd*|netbsd*|openbsd*)
     echo "BSD"
+    echo `ps`
   ;;
   default)
     echo "Something else"
+    echo `ps`
   ;;
 esac
 
