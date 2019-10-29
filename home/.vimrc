@@ -26,7 +26,7 @@ Plugin 'editorconfig/editorconfig-vim'
 
 " syntax
 Plugin 'rodjek/vim-puppet'
-Plugin 'fatih/vim-go'
+"Plugin 'fatih/vim-go'
 Plugin 'hashivim/vim-terraform'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'gabrielelana/vim-markdown'
