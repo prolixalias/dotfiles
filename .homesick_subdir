@@ -4,6 +4,7 @@
 .config/powerline
 .config/powerline/themes/tmux
 .rbenv
+.oh-my.zsh
 .vim
 .vim/bundle
 .vim/colors
