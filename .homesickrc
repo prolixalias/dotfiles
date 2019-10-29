@@ -2,7 +2,7 @@
 
 `
 if [[ ! -d ~/.oh-my-zsh ]]; then
-    REPO=prolixalias/oh-my-zsh BRANCH=master /usr/bin/sh -c "$(/usr/bin/curl -fsSL https://raw.githubusercontent.com/prolixalias/oh-my-zsh/master/tools/install.sh)" --unattended
+    REPO=prolixalias/oh-my-zsh BRANCH=master /usr/bin/zsh -c "$(/usr/bin/curl -fsSL https://raw.githubusercontent.com/prolixalias/oh-my-zsh/master/tools/install.sh) --unattended"
 fi
 `
 
@@ -16,7 +16,7 @@ end
 
 `
 #cp -n $HOME/.config/git/user.example $HOME/.config/git/user
-brew update
+#brew update
 #sh $HOME/.homesick/repos/dotfiles/install_zsh.sh  # requires brew
 #brew install pyenv
 #pyenv install 2.7.13
@@ -24,12 +24,12 @@ brew update
 `
 
 `
-pip install -U cider
-cider restore
-# rbenv install
+#pip install -U cider
+#cider restore
+#rbenv install
 #rbenv install --skip-existing 2.2.0
 #rbenv global 2.2.0
 #rbenv rehash
-gem update --system
-brew doctor # pay attention to this output
+#gem update --system
+#brew doctor # pay attention to this output
 `
