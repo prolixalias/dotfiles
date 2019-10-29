@@ -6,12 +6,9 @@ case "$OSTYPE" in
   ;;
   linux*)
     echo "Linux"
-    #if [[ ! -d ~/.oh-my-zsh ]]; then
-    #  REPO=prolixalias/oh-my-zsh BRANCH=master /usr/bin/sh -c "$(/usr/bin/curl -fsSL https://raw.githubusercontent.com/prolixalias/oh-my-zsh/master/tools/install.sh)" --unattended
-    #fi
-    #if [[ -d ~/.vim/bundle/Vundle.vim && ! -d ~/.vim/bundle/Zenburn ]]; then
-    #  /usr/bin/vim +PluginInstall +qall  
-    #fi
+    if [[ -d ~/.vim/bundle/Vundle.vim && ! -d ~/.vim/bundle/Zenburn ]]; then
+      /usr/bin/vim +PluginInstall +qall  
+    fi
   ;;
   dragonfly*|freebsd*|netbsd*|openbsd*)
     echo "BSD"
