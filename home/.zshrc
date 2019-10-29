@@ -1,4 +1,7 @@
 
+#Install Vundle if not present
+/usr/bin/git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 # Install oh-my-zsh if not present
 case "$OSTYPE" in
   darwin*)
