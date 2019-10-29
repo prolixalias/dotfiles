@@ -1,7 +1,7 @@
 function vundle_plugins() {
-  if [[ -d ~/.vim/bundle/Vundle.vim && ! -d ~/.vim/bundle/Zenburn ]]; then
   echo "Passwd: $1"
-    #/usr/bin/vim +PluginInstall +qall  
+  if [[ -d ~/.vim/bundle/Vundle.vim && ! -d ~/.vim/bundle/Zenburn ]]; then
+    /usr/bin/vim +PluginInstall +qall  
   fi
 }
 # Install stuff if not present
