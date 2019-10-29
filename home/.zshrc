@@ -9,7 +9,7 @@ case "$OSTYPE" in
   darwin*)
     echo "MacOS"
     VIM="/usr/bin/vim"
-    vundle_plugins(${VIM})
+    vundle_plugins ${VIM}
   ;;
   linux*)
     echo "Linux"
