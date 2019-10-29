@@ -4,5 +4,6 @@
 .config/powerline
 .config/powerline/themes/tmux
 .rbenv
+.vim/bundle
 .config/i3status
 .local/bin
