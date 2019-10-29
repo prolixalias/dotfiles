@@ -5,6 +5,7 @@
 .config/powerline/themes/tmux
 .rbenv
 .vim
+.vim/bundle
 .vim/colors
 .config/i3status
 .local/bin
