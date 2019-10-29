@@ -58,7 +58,7 @@ plugins=(git ruby github git-remote-branch vagrant golang docker aws terraform)
 # Set general path
 #export PATH=~/.local/bin:~/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
 
-# append stuff to path if it exists
+# prepend stuff to path if it exists
 if [ -d /usr/local/lib/python3.7/bin ]; then
   export PATH=/usr/local/lib/python3.7/bin:$PATH
 fi
@@ -72,7 +72,6 @@ if [ -d /usr/local/opt/go/libexec/bin ]; then
 fi
 
 [[ -s "/usr/share/rvm/scripts/rvm" ]] && source "/usr/share/rvm/scripts/rvm"
-
 [[ -s "/usr/local/rvm/scripts/rvm" ]] && source "/usr/local/rvm/scripts/rvm"
 
 # shell options

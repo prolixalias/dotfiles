@@ -1,20 +1,6 @@
 #!/usr/bin/env ruby
 
 `
-if [[ ! -d ~/.oh-my-zsh ]]; then
-    REPO=prolixalias/oh-my-zsh BRANCH=master /usr/bin/zsh -c "$(/usr/bin/curl -fsSL https://raw.githubusercontent.com/prolixalias/oh-my-zsh/master/tools/install.sh) --unattended"
-fi
-`
-
-home_directory = ENV['HOME']
-original_file = ".zshrc"
-pre_file = ".zshrc.pre-oh-my-zsh"
-if(File.file?("#{home_directory}/" + "#{pre_file}"))
-    File.rename("#{home_directory}/" + "#{pre_file}", "#{home_directory}/" + "#{original_file}")
-end
-
-
-`
 #cp -n $HOME/.config/git/user.example $HOME/.config/git/user
 #brew update
 #sh $HOME/.homesick/repos/dotfiles/install_zsh.sh  # requires brew
