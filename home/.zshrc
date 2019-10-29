@@ -56,7 +56,7 @@ plugins=(git ruby github git-remote-branch vagrant golang docker aws terraform)
 [[ -s "$ZSH/oh-my-zsh.sh" ]] && source "$ZSH/oh-my-zsh.sh"  
 
 # Set general path
-export PATH=~/.local/bin:~/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
+#export PATH=~/.local/bin:~/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
 
 # append stuff to path if it exists
 if [ -d /usr/local/lib/python3.7/bin ]; then
@@ -72,6 +72,7 @@ if [ -d /usr/local/opt/go/libexec/bin ]; then
 fi
 
 [[ -s "/usr/share/rvm/scripts/rvm" ]] && source "/usr/share/rvm/scripts/rvm"
+
 [[ -s "/usr/local/rvm/scripts/rvm" ]] && source "/usr/local/rvm/scripts/rvm"
 
 # shell options
@@ -118,6 +119,7 @@ alias vmdhcp='sudo /Applications/VMware\ Fusion.app/Contents/Library/vmnet-cli -
 export EDITOR='vim'
 export VAGRANT_DEFAULT_PROVIDER=virtualbox
 
+# Specify AWS credentials to use
 if [ -f ~/.aws/credentials ]; then
   export AWS_PROFILE=cynerge
 fi
