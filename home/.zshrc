@@ -1,17 +1,19 @@
-
+function vundle_plugins() {
+  if [[ -d ~/.vim/bundle/Vundle.vim && ! -d ~/.vim/bundle/Zenburn ]]; then
+  echo "Passwd: $1"
+    #/usr/bin/vim +PluginInstall +qall  
+  fi
+}
 # Install stuff if not present
 case "$OSTYPE" in
   darwin*)
     echo "MacOS"
-    echo `ps`
+    VIM="/usr/bin/vim"
+    vundle_plugins(${VIM})
   ;;
   linux*)
     echo "Linux"
-    echo `ps`
-    if [[ -d ~/.vim/bundle/Vundle.vim && ! -d ~/.vim/bundle/Zenburn ]]; then
-      /usr/bin/vim +PluginInstall +qall  
-    fi
-  ;;
+    ;;
   dragonfly*|freebsd*|netbsd*|openbsd*)
     echo "BSD"
     echo `ps`
