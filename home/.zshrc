@@ -68,6 +68,7 @@ if [ -d /usr/local/opt/go/libexec/bin ]; then
 fi
 
 [[ -s "/usr/share/rvm/scripts/rvm" ]] && source "/usr/share/rvm/scripts/rvm"
+[[ -s "/usr/local/rvm/scripts/rvm" ]] && source "/usr/local/rvm/scripts/rvm"
 
 # shell options
 set -o vi
