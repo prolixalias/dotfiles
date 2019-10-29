@@ -8,9 +8,8 @@ case "$OSTYPE" in
     if [[ ! -d ~/.oh-my-zsh ]]; then
       REPO=prolixalias/oh-my-zsh BRANCH=master /usr/bin/sh -c "$(/usr/bin/curl -fsSL https://raw.githubusercontent.com/prolixalias/oh-my-zsh/master/tools/install.sh)" --unattended
     fi
-    if [[ ! -d ~/.vim/bundle/Vundle.vim ]]; then
-      /usr/bin/git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-      /usr/bin/vi +PluginInstall +qall  
+    if [[ -d ~/.vim/bundle/Vundle.vim ]]; then
+      /usr/bin/vim +PluginInstall +qall  
     fi
   ;;
   dragonfly*|freebsd*|netbsd*|openbsd*)
