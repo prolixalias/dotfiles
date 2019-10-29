@@ -10,7 +10,7 @@ case "$OSTYPE" in
     fi
     if [[ ! -d ~/.vim/bundle/Vundle.vim ]]; then
       /usr/bin/git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-      /usr/bin/vi +PluginInstall +qall  
+      /usr/bin/vim +PluginInstall +qall  
     fi
   ;;
   dragonfly*|freebsd*|netbsd*|openbsd*)
