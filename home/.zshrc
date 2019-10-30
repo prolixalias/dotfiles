@@ -64,7 +64,9 @@ plugins=(git ruby github git-remote-branch vagrant golang docker aws terraform)
 
 [[ -s "$ZSH/oh-my-zsh.sh" ]] && source "$ZSH/oh-my-zsh.sh"  
 
-# Set general path
+[[ -x "$(command -v homesick)" ] && homesick pull 
+
+# Set general path NOTE: clobbers rvm
 #export PATH=~/.local/bin:~/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
 
 # prepend stuff to path if it exists
