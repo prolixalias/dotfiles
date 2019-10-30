@@ -8,22 +8,19 @@ function vundle_plugins() {
 # Install stuff if not present
 case "$OSTYPE" in
   darwin*)
-    echo "MacOS"
     VIM="/usr/bin/vim"
     vundle_plugins ${VIM}
   ;;
   linux*)
-    echo "Linux"
     VIM="/usr/bin/vim"
     vundle_plugins ${VIM}
   ;;
   dragonfly*|freebsd*|netbsd*|openbsd*)
-    echo "BSD"
     VIM="/usr/bin/vim"
     vundle_plugins ${VIM}
   ;;
   default)
-    echo "Something else"
+    echo "Unfamiliar with ${OSTYPE} - edit .zshrc file."
   ;;
 esac
 
