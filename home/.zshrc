@@ -27,6 +27,9 @@ esac
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
+# Disable check for write perms on oh-my-zsh dir, it's a symlink
+ZSH_DISABLE_COMPFIX=true
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
