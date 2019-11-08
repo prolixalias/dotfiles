@@ -96,7 +96,7 @@ alias tmux="tmux -2"
 alias tns="tmux new -s"
 alias ta="tmux attach"
 alias tks='tmux kill-session -t'
-alias busybox='kubectl run -i --rm --tty debug --image=busybox --restart=Never -- sh'
+alias busybox='kubectl run --namespace localdev -i --rm --tty debug --image=busybox --restart=Never -- bash'
 alias decrypt='gpg -d'
 alias 'gi'='gem install --no-ri --no-rdoc --verbose'
 alias psp='pry --simple-prompt'
