@@ -70,6 +70,10 @@ plugins=(git ruby github git-remote-branch vagrant golang docker aws terraform)
 #export PATH=~/.local/bin:~/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
 
 # prepend stuff to path if it exists
+if [ -d /usr/local/sbin ]; then
+  export PATH=/usr/local/sbin:$PATH  
+fi
+
 if [ -d /usr/local/lib/python3.7/bin ]; then
   export PATH=/usr/local/lib/python3.7/bin:$PATH
 fi
