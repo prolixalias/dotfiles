@@ -1,5 +1,5 @@
 [github]
-	user = prolixalias
+  user = prolixalias
 [core]
 	editor = vim
 	autocrlf = false
@@ -8,7 +8,10 @@
 	excludesfile = /Users/ptalbot/.gitignore_global
 [user]
 	name = Paul Talbot
-	email = prolixalias@gmail.com
+  email = prolixalias@gmail.com
+  signingkey = 0867858FD74E816C6D9F93361EFBA05011C1964F
+[gpg]
+  program = /usr/local/MacGPG2/bin/gpg2
 [alias]
   co = checkout
   ci = commit
@@ -27,4 +30,6 @@
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [merge]
-	ff = only
+  ff = only
+[credential]
+  helper = osxkeychain
