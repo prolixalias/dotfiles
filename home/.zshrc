@@ -135,7 +135,7 @@ export VAGRANT_DEFAULT_PROVIDER=virtualbox
 
 # Specify AWS credentials to use
 if [ -f ~/.aws/credentials ]; then
-  export AWS_PROFILE=cynerge
+  export AWS_PROFILE=default
 fi
 
 if [ -f /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt ]; then
