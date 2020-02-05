@@ -217,3 +217,5 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 test -e "/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlightling.zsh" && source "/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 test -e "/usr/share/zsh-syntax-highlighting/zsh-syntax-highlightling.zsh" && source "/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+test -e "/usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh" && source "/usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+test -e "/usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh" && source "/usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
