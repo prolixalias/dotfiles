@@ -34,7 +34,11 @@ ZSH_DISABLE_COMPFIX=true
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+if [[ -d $ZSH/themes/powerlevel10k ]]; then 
+  ZSH_THEME=powerlevel10k/powerlevel10k
+else
+  ZSH_THEME="agnoster"
+fi
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
