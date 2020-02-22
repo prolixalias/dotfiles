@@ -135,7 +135,7 @@ alias vmdhcp='sudo /Applications/VMware\ Fusion.app/Contents/Library/vmnet-cli -
 
 #vars
 export EDITOR='vim'
-export VAGRANT_DEFAULT_PROVIDER=virtualbox
+export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
 
 # Specify AWS credentials to use
 if [ -f ~/.aws/credentials ]; then
