@@ -60,6 +60,9 @@ fi
 # COMPLETION_WAITING_DOTS="true"
 #
 
+# NOTE: this has to be exported before plugins are loaded
+export SHOW_AWS_PROMPT=false
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
@@ -133,7 +136,7 @@ alias vmdhcp='sudo /Applications/VMware\ Fusion.app/Contents/Library/vmnet-cli -
 #alias pbcopy='xsel --clipboard --input'
 #alias pbpaste='xsel --clipboard --output'
 
-#vars
+# Some vars
 export EDITOR='vim'
 export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
 
