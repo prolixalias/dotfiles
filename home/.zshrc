@@ -238,7 +238,7 @@ right_prompt() {
 }
 
 previous_exit_status() {
-  [[ $RV -ne 0 ]] && line="%{%F{fg_bold[red]}%}$RV %{%F{yellow}%}⚠️)  "
+  [[ $RV -ne 0 ]] && line="%{%F{white}%}$RV %{%F{yellow}%}⚠️)  "
   [[ $RV -eq 0 ]] && line=""
   echo -n $line
 }
