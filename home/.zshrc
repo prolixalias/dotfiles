@@ -194,7 +194,7 @@ runon() {
   ssh $1 -- TERM=xterm $2
 }
 
-alias vgems='GEM_HOME=~/.vagrant.d/gems /Applications/Vagrant/embedded/bin/gem list'
+alias vgems='GEM_HOME=~/.vagrant.d/gems /opt/vagrant/embedded/bin/gem list'
 
 set -o vi
 alias crontab="VIM_CRONTAB=true crontab"
@@ -238,7 +238,7 @@ right_prompt() {
 }
 
 previous_exit_status() {
-  [[ $RV -ne 0 ]] && line="%{%F{fg_bold[red]}%}$RV %{%F{yellow}%}⚠️)"
+  [[ $RV -ne 0 ]] && line="%{%F{fg_bold[red]}%}$RV %{%F{yellow}%}⚠️)  "
   [[ $RV -eq 0 ]] && line=""
   echo -n $line
 }
