@@ -162,9 +162,9 @@ decryptfile() {
   gpg --decrypt $1 > $1.tar.gz
 }
 
-vdf() {
-  vagrant destroy $1 --force
-}
+#vdf() {
+#  vagrant destroy $1 --force
+#}
 
 vuf() {
   vagrant up $1 --provider=vmware_fusion
@@ -226,3 +226,21 @@ test -e "/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlightling.zsh" 
 test -e "/usr/share/zsh-syntax-highlighting/zsh-syntax-highlightling.zsh" && source "/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 test -e "/usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh" && source "/usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 test -e "/usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh" && source "/usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+
+#setopt PRINT_EXIT_VALUE
+
+right_prompt() {
+  RV=$?
+  #emojis=("⚡️" "🔥" "💀" "👑" "😎" "🐸" "🐵" "🦄" "🌈" "🍻" "🚀" "💡" "🎉" "🔑" "🇹🇭" "🚦" "🌙")
+  #RAND_EMOJI_N=$(( $RANDOM % ${#emojis[@]} + 1))
+  #prompt_segment default default "$(previous_exit_status) ⚠️) ${emojis[$RAND_EMOJI_N]} ⚠️) "
+  prompt_segment default default "$(previous_exit_status)"
+}
+
+previous_exit_status() {
+  [[ $RV -ne 0 ]] && line="%{%F{fg_bold[red]}%}$RV %{%F{yellow}%}⚠️)"
+  [[ $RV -eq 0 ]] && line=""
+  echo -n $line
+}
+
+RPROMPT='$(right_prompt)'
