@@ -231,9 +231,6 @@ test -e "/usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh" && source
 
 right_prompt() {
   RV=$?
-  #emojis=("⚡️" "🔥" "💀" "👑" "😎" "🐸" "🐵" "🦄" "🌈" "🍻" "🚀" "💡" "🎉" "🔑" "🇹🇭" "🚦" "🌙")
-  #RAND_EMOJI_N=$(( $RANDOM % ${#emojis[@]} + 1))
-  #prompt_segment default default "$(previous_exit_status) ⚠️) ${emojis[$RAND_EMOJI_N]} ⚠️) "
   prompt_segment default default "$(previous_exit_status)"
 }
 
