@@ -67,7 +67,7 @@ export SHOW_AWS_PROMPT=false
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # shellcheck disable=SC2034
-plugins=(git ruby github git-remote-branch vagrant golang docker aws terraform)
+plugins=(gcloud git ruby github git-remote-branch vagrant golang docker aws terraform)
 
 [[ -s "$ZSH/oh-my-zsh.sh" ]] && source "$ZSH/oh-my-zsh.sh"  
 
