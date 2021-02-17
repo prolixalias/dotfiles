@@ -73,8 +73,8 @@ plugins=(gcloud git ruby github git-remote-branch vagrant golang docker aws terr
 
 [[ -x "$(command -v homesick)" ]] && homesick pull --quiet
 
-# Set general path NOTE: clobbers rvm
-#export PATH=~/.local/bin:~/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
+# Set general path
+export PATH=~/.rbenv/shims:~/.local/bin:~/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
 
 # prepend stuff to path if it exists
 if [ -d /usr/local/sbin ]; then
@@ -93,8 +93,8 @@ if [ -d /usr/local/opt/go/libexec/bin ]; then
   export PATH=/usr/local/opt/go/libexec/bin:$PATH
 fi
 
-[[ -s "/usr/share/rvm/scripts/rvm" ]] && source "/usr/share/rvm/scripts/rvm"
-[[ -s "/usr/local/rvm/scripts/rvm" ]] && source "/usr/local/rvm/scripts/rvm"
+# [[ -s "/usr/share/rvm/scripts/rvm" ]] && source "/usr/share/rvm/scripts/rvm"
+# [[ -s "/usr/local/rvm/scripts/rvm" ]] && source "/usr/local/rvm/scripts/rvm"
 
 # shell options
 set -o vi
@@ -139,6 +139,7 @@ alias vmdhcp='sudo /Applications/VMware\ Fusion.app/Contents/Library/vmnet-cli -
 # Some vars
 export EDITOR='vim'
 export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)" # needed for rbenv
 
 # Specify AWS credentials to use
 if [ -f ~/.aws/credentials ]; then
