@@ -139,7 +139,9 @@ alias vmdhcp='sudo /Applications/VMware\ Fusion.app/Contents/Library/vmnet-cli -
 # Some vars
 export EDITOR='vim'
 export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
-export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)" # needed for rbenv
+if [ -e /usr/local/bin/brew ]; then
+  export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)" # needed for rbenv on MacOS
+fi
 
 # Specify AWS credentials to use
 if [ -f ~/.aws/credentials ]; then
